@@ -32,7 +32,7 @@ def get_response():
     res = conn.getresponse()
     data = res.read()
 
-    return render_template('index.html', user_input=user_input, response=data.decode("utf-8"))
+    return render_template('index.html', user_input=user_input.replace("\n","<br>"), response=data.decode("utf-8").replace("\n","<br>"))
 
 if __name__ == '__main__':
     app.run(debug=True)
