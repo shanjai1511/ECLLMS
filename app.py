@@ -17,7 +17,7 @@ def get_response():
     payload = [
         {
             "role": "user",
-            "content": user_input
+            "content": user_input + " step by step"
         }
     ]
 
